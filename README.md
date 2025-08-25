@@ -74,16 +74,6 @@ src/
 └── main.jsx         # Application entry point
 ```
 
-## Deployment
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-This will create a `dist` directory with production-ready files.
-
 ## Future Improvements
 
 - Implement Redux for global state management
