@@ -1,0 +1,115 @@
+/* Theme CSS file */
+:root {
+  --primary-gradient: linear-gradient(to right, #2980B9, #6DD5FA);
+  --primary-color: #2980B9;
+  --secondary-color: #6DD5FA;
+  --light-bg: #f8f9fa;
+}
+
+.active-link {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 5px;
+  border-left: solid 3px;
+}
+
+.active-indicator {
+  background-color: white !important;
+}
+
+.btn-primary {
+  background: var(--primary-gradient) !important;
+  border: none !important;
+}
+
+header {
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.theme-bg-light {
+  background-color: var(--light-bg);
+}
+
+.sidebar {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 250px;
+  z-index: 1030;
+  background: var(--primary-gradient) !important;
+
+}
+
+.sidebar-wrapper {
+  transition: all 0.3s ease;
+}
+
+.sidebar-wrapper.desktop {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* Mobile sidebar */
+.sidebar-wrapper.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1040;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* Show sidebar wrapper when open */
+.sidebar-wrapper.mobile.open {
+  transform: translateX(0);
+}
+
+.sidebar-wrapper.mobile .sidebar {
+  height: 100%;
+  transform: none !important;
+}
+
+/* No need for these since we're controlling at wrapper level */
+.sidebar-wrapper.mobile .sidebar.sidebar-open,
+.sidebar-wrapper.mobile .sidebar.sidebar-closed {
+  transform: none !important;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1035;
+}
+
+/* Style card headers */
+.card-header {
+  background: var(--primary-gradient) !important;
+  color: white !important;
+}
+
+/* Analytics cards */
+.analytics-card{
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
+transition: all 0.3s ease;
+border-top: 3px solid var(--primary-color);
+}
+
+.card {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.analytics-card:hover,
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+
+
+
