@@ -12,7 +12,8 @@ A responsive admin dashboard built with React, featuring user management, analyt
   - Add new users with form validation
   - Edit existing user details
   - Delete users
-  - All data managed in local component state
+  - State management with Redux Toolkit
+  - Floating label design for improved form UX
 - **Analytics Dashboard**:
   - KPI cards showing key metrics
   - Multiple chart types (Pie, Doughnut, Bar, etc.)
@@ -20,6 +21,7 @@ A responsive admin dashboard built with React, featuring user management, analyt
 
 ### Technical Features
 - Built with React and Vite for fast development
+- Redux Toolkit for centralized state management
 - React Router for client-side routing
 - Bootstrap 5 for responsive design
 - Chart.js with react-chartjs-2 for data visualization
@@ -63,6 +65,9 @@ src/
 │   ├── Dashboard.jsx # Main dashboard page
 │   ├── Users.jsx     # Users management page
 │   └── Analytics.jsx # Analytics and charts page
+├── redux/            # Redux state management
+│   ├── slices/       # Redux slices (features)
+│   └── store.js      # Redux store configuration
 ├── router/           # Routing configuration
 ├── styles/           # CSS and styling files
 ├── App.jsx           # Main application component
@@ -78,28 +83,6 @@ npm run build
 ```
 
 This will create a `dist` directory with production-ready files.
-
-### Deployment Options
-
-#### Vercel
-1. Create an account on [Vercel](https://vercel.com/)
-2. Install Vercel CLI: `npm i -g vercel`
-3. Run `vercel` in the project directory and follow the prompts
-4. For subsequent deployments: `vercel --prod`
-
-#### Netlify
-1. Create an account on [Netlify](https://www.netlify.com/)
-2. Set up a new site from Git or drag and drop the `dist` folder
-3. Configure build settings if deploying from Git:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-
-#### Firebase
-1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
-2. Install Firebase CLI: `npm install -g firebase-tools`
-3. Login to Firebase: `firebase login`
-4. Initialize Firebase: `firebase init` (select Hosting)
-5. Deploy: `firebase deploy`
 
 ## Future Improvements
 
